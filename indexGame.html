@@ -3,100 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the first 'handmade' game of my life</title>
+    <title>Philosophy has never been so fun!</title>
     <link rel="stylesheet" href="styleGame.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css?family=Share+Tech&display=swap');
-    </style> -->
 </head>
 
 <body>
-<!-- NAVIGATION BAR -->
 
+<!-- NAVIGATION BAR -->
 <nav>
     <div class="navigationBar">
-        <img src="SpinozaHeadGame.png" alt="logo-spinoza" class="spinoza">
-        <div class="caption">Philosophy has never been so fun!</div>
-        <div class="nav-div">hyperlink to deck</div>
-        <div class="nav-div">hyperlink to linkedin</div>
-        <div class="nav-div">hyperlink to slack</div>
+        <!-- update URL for refresh or add a function for it -->
+        <a href="#"><img src="./Photos/SpinozaHeadGame.png" alt="logo-spinoza" id="spinoza"></a>
+        <div class="caption">'Philosophy has never been so fun!'<br><span class="spanSpinoza">Spinoza</span></div>
+        <div class="nav-div"><a href="#" target="_blank">hyperlink to deck</a></div>
+        <div class="nav-div"><a href="https://www.linkedin.com/in/matteoazzola/" target="_blank">About me</a></div>
+        <div class="nav-div"><a href="mailto:matteoazzola23@gmail.com" target="_blank">Contact me!</a></div>
     </div>
 </nav>
-
-
-<!-- USED! -->
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-    <li class="nav-item active">
-        <a class="nav-link" href="#">hyperlink to deck</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">hyperlink to linkedin</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">hyperlink to slack</a>
-    </li>
-    </ul>
-</div>
-</nav> -->
 
 <!-- CONTAINER WITH SIDE BARS + CARDS -->
 
 <div class="mainbody">
     <!-- LEFT SIDEBAR -->
     <div class="leftSideBar">
-        <div>add instructions here</div>
-        <ol>
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-            <li>e</li>
-        </ol>
+        <div class="instructions"><p>Instructions</p></div>
+        <p><span class="leftList">A)</span>Pick one card!</p>
+        <p><span class="leftList">B)</span>Give the right answer to make some points!</p>
+        <p><span class="leftList">C)</span>Check your progress on the right!</p>
+        <p><span class="leftList">D)</span>Hit Spinoza if you want to restart the game!</p>
+        <p><span class="leftList">E)</span>GOOD LUCK!</p>
     </div>
     <!-- ROW 1 -->
     <div class="container">
         <div class="row">
             <div class="column">
                 <div class="card">
-                <h3>Card 1</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+                <h3>Try me!</h3>
+                <!-- <p>Some text</p>
+                <p>Some text</p> -->
                 </div>
             </div>
             
             <div class="column">
                 <div class="card">
-                <h3>Card 2</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+                <h3>Open me!</h3>
+                <!-- <p>Some text</p>
+                <p>Some text</p> -->
                 </div>
             </div>
             
             <div class="column">
                 <div class="card">
-                <h3>Card 3</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+                <h3>Tricky!</h3>
+                <!-- <p>Some text</p> -->
+                <!-- <p>Some text</p> -->
                 </div>
             </div>
             
             <div class="column">
                 <div class="card">
-                <h3>Card 4</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+                <h3>Challenging!</h3>
+                <!-- <p>Some text</p>
+                <p>Some text</p> -->
                 </div>
             </div>
     
             <div class="column">
                 <div class="card">
-                    <h3>Card 5</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
+                    <h3>!</h3>
+                    <!-- <p>Some text</p>
+                    <p>Some text</p> -->
                 </div>
             </div>
         </div>
@@ -232,13 +208,23 @@
                 </div>
             </div>
         </div>
+
     </div>
-    
+
+    <!-- QUESTIONS CONTAINER -->
+    <div id="questionsContainer">
+        <div class="question" id="questionToAnswer">test question</div><br>
+        <div class="answers" id= "answerA">test answer aaaaa</div><br>
+        <div class="answers" id="answerB">test answer bbbb</div><br>
+        <div class="answers" id="answerC">test answer cccc</div><br>
+    </div>
+
     <!-- RIGHT SIDE BAR -->
     <div class="rightSideBar">
         <div>add something here on the right</div>
         <label for="file">Downloading progress:</label>
         <progress id="file" value="60" max="100"> 60% </progress>
+        <audio src="./Photos/Moderat - A New Error.mp3"></audio>
     <!-- TO BE LINKED TO THE FUNCTION LATER ON -->
     </div>
     <!-- FINISH OF THE DIV CONTAINER WITH SIDEBARS + CARDS  -->
@@ -246,14 +232,9 @@
 
 <!-- POSSIBLE FOOTER IF I HAVE TIME FOR IT! -->
 
-
-
 <!-- CONNECT THE JS SCRIPT! -->
+<script src="theGameCards.js"></script>
+<script src="theGame.js"></script>
 
-
-<!-- BOOTSTRAP CONNECTION -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 </body>
 </html>
