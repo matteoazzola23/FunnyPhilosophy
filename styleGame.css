@@ -71,8 +71,8 @@ a {
     border-radius: 11px;
     margin: 8px;
     width: 100%;
-    height: auto;
-    text-align: center;
+    /* height: auto; */
+    height: 128px;
     background-color:rgb(0, 0, 0);
 }
 
@@ -93,27 +93,32 @@ a {
 }
 
 /* just a test */
-/* .card {
+.card {
     color: blanchedalmond;
-} */
+    text-align: center;
+    align-items: center;
+
+}
 
 /* LEFT SIDE BAR */
 
 .leftList {
     color:#E8B650;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    padding-right: 5px;
 }
 
 .leftSideBar > p {
     font-size: 1.2em;
     display: flex;
-    align-items: center;
-    margin: 15%;
+    /* align-items: center; */
+    margin: 6%;
     max-height: 100vh;
 }
 
 .instructions {
     text-transform: uppercase;
+    margin-top: 0em;
     font-size: 1.5em;
     text-indent: 1.5em;
 }
@@ -121,45 +126,36 @@ a {
 /* QUESTIONS' CONTAINER  */
 
 #questionsContainer {
-    width: 900px;
+    width: 880px;
     height: 500px;
     padding: 50px;
     text-align: center;
     background-color: #E8B650;
-    margin: 4.5% 10% 0 7%;
+    margin: 4.5% 9% 0 9%;
     display: none;
     position: absolute;
     top: 30px; 
     left: 100px;
-};
+}
 
-/* #questionDiv {
-  
+.question {
     color: black;
     font-size: 4.2em;
     font-weight: bold;
-} */
-
-/* #questionsContainer > div{
-
-    color: black;
-    font-size: 3.9em;
-    font-weight: bold;
-    border: solid 2px black;
-} */
-#questionsContainer > div.question{
-    color: pink;
+    font-style: italic;
 }
 
-.question{
-    color: pink;
-}
 #questionsContainer .answers {
     color: black;
     font-size: 3.9em;
     font-weight: bold;
     border: solid 2px black;
 }
+
+
+
+
+
 /* 
 #answerB {
     color: black;
@@ -179,3 +175,7 @@ a {
 
 
 /* RIGHT SIDE IS A BONUS IF I HAVE TIME  */
+
+#audio {
+    max-width: 70%;
+}

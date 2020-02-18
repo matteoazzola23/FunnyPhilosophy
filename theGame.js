@@ -9,11 +9,13 @@ function refresh() {
 
 // FUNCTION THAT LINKS TO RANDOM QUESTIONS
 
-const openCards = document.getElementsByClassName('card')
+const openCards = document.getElementsByClassName('card');
 for(let i =0; i < openCards.length; i++) {
     openCards[i].addEventListener("click", function() {
+        
         openDiv();
         let a = selectRandom(questions);
+        
         console.log(a);
         populateQuestion(a)
     });
@@ -33,8 +35,6 @@ function openDiv() {
 // FUNCTION THAT POPULATES QUESTIONS IN THE DIV 
 
 function populateQuestion(question) {
-    // console.log("inside populate")
-    // const openDiv = document.getElementById("questionsContainer");
 
     //OPTION ONE 
 
@@ -54,7 +54,7 @@ function populateQuestion(question) {
     // }
     // })
 
-    // OPTION TWO 
+    // OPTION TWO - MY PREFERRED ONE
 
     document.getElementById("questionToAnswer").innerHTML = question.question;
     document.getElementById("answerA").innerHTML = question.answerA;
@@ -62,13 +62,31 @@ function populateQuestion(question) {
     document.getElementById("answerC").innerHTML = question.answerC;
 };
 
-// CHECK RANA'S FILE WITH SOUNDS AND INDEX OF IT
+// FUNCTION REPLY QUESTIONS
 
-// function openTest() {
-//     console.log('open')
-//     selectRandom(questions);
+const reply = document.querySelector("#questionsContainer");
+reply.addEventListener("click", function(e){
+    // console.log('click')
+    // console.log(e.target.id)
+    // console.log(questions[currentQuestion].correct)
+    if(e.target.id === questions[currentQuestion].correct) {
+        e.target.style.background = 'green';
+        console.log('correct answer')
+    } else {
+        e.target.style.background = 'red';
+    }
+});
 
-// };
+// FUNCTION RETURN TO HOME
+
+
+// FUNCTION DO NOT REPEAT THE PREVIOUS QUESTION
+
+
+
+// FUNCTION POINTS
+
+
 
 
 

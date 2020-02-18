@@ -9,7 +9,7 @@ let questions = [
     answerA: "BLO",
     answerB: "BLU",
     answerC: "BLI",
-    correct: "A"
+    correct: "answerA"
 },
 
     {
@@ -17,42 +17,38 @@ let questions = [
     answerA: "QUI",
     answerB: "QUADRO",
     answerC: "QUELLO",
-    correct: "B",
+    correct: "answerA",
+},
+
+{
+    question: "hhhhhhhhhhh?",
+    answerA: "YEP",
+    answerB: "YET",
+    answerC: "YETI",
+    correct: "answerA",
+},
+
+{
+    question: "qqqquuuuuua?",
+    answerA: "MAYBE",
+    answerB: "MAH",
+    answerC: "BOH",
+    correct: "answerA",
 },
 
 ];
+
 // AND SO ON UP TO 20 QUESTIONS
-
-
 // SELECT RANDOM QUESTION (not sure if it has to go in another js file or not) 
 
+let currentQuestion
+
 function selectRandom(array) {
-    return array[Math.floor(Math.random()*questions.length)];
+    currentQuestion = Math.floor(Math.random()*questions.length)
+    return array[currentQuestion];
 };
 
 selectRandom(questions);
-
-// THIS WORKS 
-
-// console.log('testone')
-
-
-//TO CREATE A QUESTION IN THE PAGE
-
-let lastQuestionIndex = questions.lenght-1;
-let runningQuestionIndex = 0;
-
-function renderQuestions() {
-    let q = questions[runningQuestionIndex];
-    question.innerHTML = "<p>" + q.question + "</p>";
-    choiceA.innerHTML = q.choiceA;
-    choiceB.innerHTML = q.choiceB;
-    choiceC.innerHTML = q.choiceC;
-}
-
-
-
-
 
 
 
