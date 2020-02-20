@@ -163,5 +163,19 @@ a {
 }
 
 
-/* RIGHT SIDE IS A BONUS IF I HAVE TIME  */
+/* RIGHT-SIDE BAR */
 
+.progress {
+    height: 400px;
+    width: 25px;
+    float: inherit;
+    margin: 20% 40%;
+    border: transparent;
+  }
+  .progress-bar {
+    float: left;
+    width: 0;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, #f1d395 , #daa520);
+  }

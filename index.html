@@ -24,6 +24,7 @@
 <!-- CONTAINER WITH SIDE BARS + CARDS -->
 
 <div class="mainbody">
+
     <!-- LEFT SIDEBAR -->
     <div class="leftSideBar">
         <div class="instructions"><p>Instructions</p></div>
@@ -191,7 +192,7 @@
 
     </div>
 
-    <!-- QUESTIONS CONTAINER -->
+ <!-- QUESTIONS CONTAINER -->
     <div id="questionsContainer">
         <div class="question" id="questionToAnswer"></div><br>
         <div id="questionsBox">
@@ -201,14 +202,21 @@
         </div>
     </div>
 
-    <!-- RIGHT SIDE BAR -->
+ <!-- RIGHT SIDE BAR -->
     <div class="rightSideBar">
-        <div><p>something here on the right</p></div>
-        <label for="file">Downloading progress:</label>
-        <progress id="file" value="60" max="100"> 60% </progress>
-    <!-- TO BE LINKED TO THE FUNCTION LATER ON -->
+      <div class="container">
+        <h2>Progress bar</h2>
+          <div class="progress">
+            <div class="progress-bar" style="height:100%">
+              <div class="text-center p-absolute">
+                <img src="./Photos/SpinozaHeadGame.png" alt="logo-spinoza" id="spinoza">
+              </div>
+            </div>   
+          </div>
+        </div>
     </div>
-    <!-- END OF THE DIV CONTAINER WITH SIDEBARS + CARDS  -->
+
+ <!-- END OF THE DIV CONTAINER WITH SIDEBARS + CARDS  -->
 </div>
 
 <!-- CONNECT THE JS SCRIPT! -->
