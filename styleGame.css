@@ -32,8 +32,8 @@ body {
 }
 
 .spanSpinoza {
-    color: black;
-    font-size: 0.7em;
+    color: red;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
@@ -93,12 +93,19 @@ a {
     padding: 1em;
 }
 
-/* just a test */
 .card {
-    color: blanchedalmond;
+    color: white;
     text-align: center;
+    padding: 4px;
     /* align-items: center; */
+}
 
+.card > p {
+    color: rgb(0, 0, 0);
+}
+
+.card:hover {
+    color: black;
 }
 
 /* LEFT SIDE BAR */
@@ -112,22 +119,21 @@ a {
 .leftSideBar > p {
     font-size: 1.2em;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     margin: 6%;
     max-height: 100vh;
 }
 
 .instructions {
     text-transform: uppercase;
+    color: #E8B650;
     margin-top: 0em;
     font-size: 1.5em;
     text-indent: 1.5em;
 }
 
 /* QUESTIONS' CONTAINER  */
-.hide{
-    display: none;
-}
+
 #questionsContainer {
     width: 880px;
     height: 500px;
@@ -157,29 +163,5 @@ a {
 }
 
 
-
-
-
-/* 
-#answerB {
-    color: black;
-    font-size: 1.9em;
-    font-weight: bold;
-    border: solid 2px black;
-}
-
-#answerC {
-    color: black;
-    font-size: 1.9em;
-    font-weight: bold;
-    border: solid 2px black;
-} */
-
-
-
-
 /* RIGHT SIDE IS A BONUS IF I HAVE TIME  */
 
-#audio {
-    max-width: 70%;
-}

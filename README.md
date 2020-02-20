@@ -22,4 +22,13 @@ for function giveAnAnswer and index function?
 // 
 
 
+// line 78/79
+// if (questions.length === 0) {
+            //     var img = document.createElement('img'); 
+            //     img.src = "./Photos/Heidegger.jpg"; 
+            //     document.getElementById('questionsContainer').style.display = "none"
+            //     document.getElementById('questionsContainer').appendChild(img); 
+            // }
+            // else{}
+
 
