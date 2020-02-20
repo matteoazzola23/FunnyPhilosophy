@@ -7,14 +7,32 @@ function refresh() {
     console.log('refresh')
 };
 
+// SELECT RANDOM QUESTION 
+
+let currentQuestion
+
+function selectRandom(array) {
+    currentQuestion = Math.floor(Math.random()*questions.length)
+    return array[currentQuestion];
+};
+
+selectRandom(questions);
+
 // FUNCTION THAT LINKS TO RANDOM QUESTIONS
 
 const openCards = document.getElementsByClassName('column');
 for(let i =0; i < openCards.length; i++) {
     openCards[i].addEventListener("click", function() {
-        openDiv();
         let a = selectRandom(questions);
+        if(a){
+        openDiv();
         populateQuestion(a);
+        }
+        else{
+        document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/Heidegger.jpg"/>`;
+        openDiv();
+        }
+        
     });
 };
 
@@ -25,6 +43,13 @@ function openDiv() {
     if (openDiv.style.display === '' || openDiv.style.display === 'none') {
         openDiv.style.display = "block";
     }
+};
+
+// FUNCTION RETURN TO HOME
+
+function closeDiv() {
+    const closeDiv = document.getElementById("questionsContainer");
+    closeDiv.style.display = "none";
 };
 
 // FUNCTION THAT POPULATES QUESTIONS IN THE DIV 
@@ -43,34 +68,43 @@ reply.addEventListener("click", function(e){
 
     if(e.target.id === questions[currentQuestion].correct) {
         e.target.style.background = 'green';
-        console.log('correct answer');
         
         setTimeout(()=>{
             for(let i = 0; i < this.children.length; i++) {
                 this.children[i].style.background = ""
             }
-            console.log("friend", questions[currentQuestion])
-
-            let array = questions.filter(item=> item.id !== questions[currentQuestion].id)
-            questions = array
+            let array = questions.filter(item=> item.id !== questions[currentQuestion].id);
+            questions = array;
             closeDiv();
-        },1000)
+            // if (questions.length === 0) {
+            //     var img = document.createElement('img'); 
+            //     img.src = "./Photos/Heidegger.jpg"; 
+            //     document.getElementById('questionsContainer').style.display = "none"
+            //     document.getElementById('questionsContainer').appendChild(img); 
+            // }
+            // else{}
+        },1500)
         
     } else {
         e.target.style.background = 'red';
     } 
 });
 
-// FUNCTION RETURN TO HOME
 
-function closeDiv() {
-    const closeDiv = document.getElementById("questionsContainer");
-    closeDiv.style.display = "none";
+// TESTING HERE BELOW
+
+function finshedGame() {
+    if (questions.length === 0) {
+        console.log(questions);
+        var img = document.createElement('img'); 
+        img.src = "./Photos/Heidegger.jpg"; 
+        document.getElementById('questionsContainer').appendChild(img); 
+    }
 };
 
-
-
 // ADJUST FUNCTION REFRESH
+
+
 
 // FUNCTION POINTS
 

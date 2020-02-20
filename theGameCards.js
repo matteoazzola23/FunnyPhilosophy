@@ -37,17 +37,7 @@ let questions = [
 ];
 
 // AND SO ON UP TO 20 QUESTIONS
-// SELECT RANDOM QUESTION (not sure if it has to go in another js file or not) 
 
-let currentQuestion
-// let lastQuestionIndex = questions.length - currentQuestion; // Added this one
-
-function selectRandom(array) {
-    currentQuestion = Math.floor(Math.random()*questions.length)
-    return array[currentQuestion];
-};
-
-selectRandom(questions);
 
 
 

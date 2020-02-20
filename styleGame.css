@@ -125,7 +125,9 @@ a {
 }
 
 /* QUESTIONS' CONTAINER  */
-
+.hide{
+    display: none;
+}
 #questionsContainer {
     width: 880px;
     height: 500px;
