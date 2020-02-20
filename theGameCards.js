@@ -1,8 +1,7 @@
 
-// create several const and get the element from the html document.getElementByID, etc.
 // https://www.google.com/search?q=create+a+simple+quiz+in+javascript&oq=create+a+quiz+in+js&aqs=chrome.3.69i57j0l5.10694j0j4&sourceid=chrome&ie=UTF-8#kpvalbx=_TOxCXpODK4HykwWPjKGwDw28
 
-// QUESTIONS 
+// QUESTIONS ARRAY
 let questions = [
     {
     question: "bla bla bla?",
@@ -25,7 +24,7 @@ let questions = [
     answerA: "YEP",
     answerB: "YET",
     answerC: "YETI",
-    correct: "answerA",
+    correct: "answerB",
 },
 
 {
@@ -33,7 +32,7 @@ let questions = [
     answerA: "MAYBE",
     answerB: "MAH",
     answerC: "BOH",
-    correct: "answerA",
+    correct: "answerC",
 },
 
 ];
@@ -42,6 +41,7 @@ let questions = [
 // SELECT RANDOM QUESTION (not sure if it has to go in another js file or not) 
 
 let currentQuestion
+let lastQuestionIndex = questions.length - currentQuestion; // Added this one
 
 function selectRandom(array) {
     currentQuestion = Math.floor(Math.random()*questions.length)
