@@ -23,4 +23,3 @@ for function giveAnAnswer and index function?
 
 
 
-// let correctAnswer = questions.correct === answerC || answerB || answerA;
