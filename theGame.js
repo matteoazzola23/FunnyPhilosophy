@@ -85,6 +85,13 @@ reply.addEventListener("click", function(e){
 
 // FUNCTION POINTS
 
+function progressBar() {
+    document.getElementById("progress-bar").innerHTML = progressBar;
+    const progressBar = 0;
+    if(e.target.id === questions[currentQuestion].correct) {
+        progressBar += 5;
+    }
+}
 
 
 

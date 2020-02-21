@@ -165,6 +165,3 @@ let questions = [
 
 // AND SO ON UP TO 20 QUESTIONS
 
-
-
-

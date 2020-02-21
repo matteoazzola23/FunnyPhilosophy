@@ -32,7 +32,7 @@ body {
 }
 
 .spanSpinoza {
-    color: red;
+    color: rgb(126, 86, 5);
     font-size: 0.8em;
     font-weight: bold;
 }
@@ -124,7 +124,7 @@ a {
     max-height: 100vh;
 }
 
-.instructions {
+.headerSideBar {
     text-transform: uppercase;
     color: #E8B650;
     margin-top: 0em;
@@ -162,7 +162,6 @@ a {
     margin: 1.5px 0px;
 }
 
-
 /* RIGHT-SIDE BAR */
 
 .progress {
@@ -171,11 +170,13 @@ a {
     float: inherit;
     margin: 20% 40%;
     border: transparent;
-  }
-  .progress-bar {
-    float: left;
-    width: 0;
-    width: 100%;
-    position: relative;
-    background: linear-gradient(to bottom, #f1d395 , #daa520);
-  }
+}
+
+#progress-bar {
+    background: linear-gradient(to bottom, white , #E8B650);
+}
+
+.progressBarTitle {
+    margin-top: 30px;
+    text-indent: 20px;
+}
