@@ -193,4 +193,12 @@ let questions = [
     correct: "answerC"
 },
 
+{   id:25, 
+    question: "Who said 'the starry heavens above me and the moral law within me'?",
+    answerA: "Kant",
+    answerB: "Aristotle",
+    answerC: "Avicenna",
+    correct: "answerA"
+},
+
 ];
