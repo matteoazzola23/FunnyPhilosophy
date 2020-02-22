@@ -177,4 +177,20 @@ let questions = [
     correct: "answerA"
 },
 
+{   id:23, 
+    question: "Who believed that infants cry because of the noise made by planets while moving around in the universe?",
+    answerA: "Epicurus",
+    answerB: "Pythagoras",
+    answerC: "Lucretius",
+    correct: "answerB"
+},
+
+{   id:24, 
+    question: "Who invented the definition of 'atom' in the 5th century BC?",
+    answerA: "Plato",
+    answerB: "Democritus",
+    answerC: "Leucippus",
+    correct: "answerC"
+},
+
 ];

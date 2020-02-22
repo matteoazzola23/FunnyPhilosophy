@@ -1,12 +1,3 @@
-// FUNCTION RESTART THE GAME 
-
-// const restart = document.getElementById("spinoza");
-// restart.addEventListener("click", refresh);
-
-// function refresh() {
-//     console.log('refresh')
-// };
-
 // SELECT RANDOM QUESTION 
 
 let currentQuestion
@@ -29,7 +20,7 @@ for(let i =0; i < openCards.length; i++) {
         populateQuestion(a);
         }
         else{
-        document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/HeideggerTransparentSentence.png"/>`;
+        document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/HeideggerTransparentSentence.png"/>`; //this image will populate only in case of answering all the questions. However, replying to 10 questions will conclude the game.
         openDiv();
         }
         
@@ -99,7 +90,7 @@ function progressBar() {
         
     } else {
         height++;
-        elem.style.height = height * 200 + "px";
+        elem.style.height = height * 20 + "px";
     }    
 }
 
