@@ -1,34 +1,9 @@
+My first project in HTML, CSS, JavaScript!
 
+It's a (philosophical) quiz that I created for testing my knowledge when creating simple webpages. I worked on DOM, array manipulation, and creating functions to make the game work: creating a div that pops up when a card is clicked, populate questions in the div, replying to them, adding points in the progress bar, closing the div and restart the game. 
 
+Unfortunately, the quiz isn't built in a mobile responsive way. I'll try to work on it in the future if needed. 
 
-for function giveAnAnswer and index function?
+Project realized for the conclusion of the first module of the Web Developement course by IronHack - Amsterdam.
 
-//     if (questions[i].correct === answerA || answerB || answerC) {
-//     console.log('test-inside')
-//     // return reply.innerHTML = "That's correct!"
-//     return `That's correct!`
-//     } else {
-//     return reply.innerHTML = "Better go to the library!"
-//     }
-// });
-
-
-// let lastQuestionIndex = questions.length -1;
-// let runningQuestionIndex = 0;
-
-// function renderQuestion() {
-//     let q = questions[runningQuestionIndex];
-// }
-// 
-
-
-// line 78/79
-// if (questions.length === 0) {
-            //     var img = document.createElement('img'); 
-            //     img.src = "./Photos/Heidegger.jpg"; 
-            //     document.getElementById('questionsContainer').style.display = "none"
-            //     document.getElementById('questionsContainer').appendChild(img); 
-            // }
-            // else{}
-
-
+teo23, Amsterdam, February 2020.

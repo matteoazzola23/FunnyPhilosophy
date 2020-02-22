@@ -75,6 +75,7 @@ reply.addEventListener("click", function(e){
             }
             let array = questions.filter(item=> item.id !== questions[currentQuestion].id);
             questions = array;
+            progressBar(); //TESTING OUT PROGRESS BAR
             closeDiv();
         },1500)
         
@@ -83,15 +84,23 @@ reply.addEventListener("click", function(e){
     } 
 });
 
-// FUNCTION POINTS
+var height = 0;
 
 function progressBar() {
-    document.getElementById("progress-bar").innerHTML = progressBar;
-    const progressBar = 0;
-    if(e.target.id === questions[currentQuestion].correct) {
-        progressBar += 5;
-    }
+    var elem = document.getElementById("progress-bar");
+    
+    if (height >= 400) {
+        height = 0;
+    } else {
+        height++;
+        elem.style.height = height * 20 + "px";
+    }    
 }
+
+
+
+
+
 
 
 

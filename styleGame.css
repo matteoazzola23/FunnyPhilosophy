@@ -149,7 +149,7 @@ a {
 
 .question {
     color: black;
-    font-size: 4.2em;
+    font-size: 3.2em;
     font-weight: bold;
     font-style: italic;
 }
@@ -164,19 +164,20 @@ a {
 
 /* RIGHT-SIDE BAR */
 
-.progress {
-    height: 400px;
-    width: 25px;
-    float: inherit;
-    margin: 20% 40%;
-    border: transparent;
-}
-
-#progress-bar {
-    background: linear-gradient(to bottom, white , #E8B650);
-}
-
 .progressBarTitle {
     margin-top: 30px;
     text-indent: 20px;
 }
+
+.progress {
+    height: 400px;
+    width: 25px;
+    margin: 10% 40%;
+    background-color: white;
+}
+
+#progress-bar {
+    background: linear-gradient(to bottom, white , #E8B650);
+    height: 0px;
+}
+
