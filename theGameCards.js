@@ -1,4 +1,4 @@
-// QUESTIONS ARRAY
+// QUESTIONS' ARRAY
 let questions = [
 
 {   id:1, 

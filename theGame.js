@@ -29,7 +29,7 @@ for(let i =0; i < openCards.length; i++) {
         populateQuestion(a);
         }
         else{
-        document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/Heidegger.jpg"/>`;
+        document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/HeideggerTransparentSentence.png"/>`;
         openDiv();
         }
         
@@ -73,9 +73,9 @@ reply.addEventListener("click", function(e){
             for(let i = 0; i < this.children.length; i++) {
                 this.children[i].style.background = ""
             }
-            let array = questions.filter(item=> item.id !== questions[currentQuestion].id);
+            let array = questions.filter(item   => item.id !== questions[currentQuestion].id);
             questions = array;
-            progressBar(); //TESTING OUT PROGRESS BAR
+            progressBar();
             closeDiv();
         },1500)
         
@@ -87,16 +87,21 @@ reply.addEventListener("click", function(e){
 var height = 0;
 
 function progressBar() {
-    var elem = document.getElementById("progress-bar");
-    
-    if (height >= 400) {
-        height = 0;
+    var elem = document.querySelector("#progress-bar");
+    if (elem.style.height === "200px") {
+        height++;
+        elem.style.height = height * 200 + "px";
+        setTimeout(function(){
+            elem.style.height = 0;
+            document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/YouWonTwo.png" alt="you won!">`
+            openDiv();
+        }, 1500)
+        
     } else {
         height++;
-        elem.style.height = height * 20 + "px";
+        elem.style.height = height * 200 + "px";
     }    
 }
-
 
 
 
