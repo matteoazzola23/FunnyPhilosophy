@@ -72,6 +72,13 @@ reply.addEventListener("click", function(e){
         
     } else {
         e.target.style.background = 'red';
+        setTimeout(() => {
+            for(let i = 0; i < this.children.length; i++) {
+                this.children[i].style.background = ""
+            }
+            // reduceBar();
+            closeDiv();
+        }, 1000);
     } 
 });
 
@@ -79,9 +86,9 @@ var height = 0;
 
 function progressBar() {
     var elem = document.querySelector("#progress-bar");
-    if (elem.style.height === "200px") {
+    if (elem.style.height === "400px") {
         height++;
-        elem.style.height = height * 200 + "px";
+        // elem.style.height = height * 200 + "px";
         setTimeout(function(){
             elem.style.height = 0;
             document.getElementById("questionsContainer").innerHTML = `<img src="./Photos/YouWonTwo.png" alt="you won!">`
@@ -90,11 +97,18 @@ function progressBar() {
         
     } else {
         height++;
-        elem.style.height = height * 20 + "px";
+        elem.style.height = height * 50 + "px";
     }    
 }
 
-
+// function reduceBar() {
+//     var elem = document.querySelector("#progress-bar");
+//     if (elem.style.height >= "25px") {
+//         console.log("test")
+//         height--;
+//         elem.style.height = height * 25 - "px";
+//     }
+// }
 
 
 
